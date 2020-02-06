@@ -1,0 +1,20 @@
+{ "configuration":
+{
+    "appenders": {
+        "RandomAccessFile": { "name": "FILE", "fileName": "app.log",
+            "PatternLayout": { "pattern": "%d %p %c{1.} [%t] %m%n" }
+        },
+        "Console": { "name": "STDOUT",
+            "PatternLayout": { "pattern": "%m%n" }
+        }
+    },
+    "loggers": {
+        "root": { "level": "trace",
+            "AppenderRef": [
+                { "ref": "STDOUT" },
+                { "ref": "FILE" }
+            ]
+        }
+    }
+}
+}
