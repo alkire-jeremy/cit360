@@ -7,16 +7,18 @@ public class ExecuteThreads {
 		System.out.println("Starting " + Thread.currentThread().getName() + " thread.");
 	
 		// Construct objects.
-		Audio instrumentalThread = new Audio();
-		Audio vocalThread = new Audio();
-		Delay delayThread = new Delay(); // Note: Delay is actually an implementation of Runnable.
+		Audio instrumentalThread = new Audio(); // Audio is a subclass of Thread, and starts with the start() method.
+		Audio vocalThread = new Audio(); // Audio is a subclass of Thread, and starts with the start() method.
+		Delay delayRunnable = new Delay(); // Note: Delay is actually an implementation of Runnable.
+		
+		// Runnables can start either via being passed into the Thread constructor, or by being passed to an executor.
 		
 		// Pass audio path into object's setSong() method parameters.
 		instrumentalThread.setSong("http://music.faintdev.net/paulgift.wav");
 		vocalThread.setSong("http://music.faintdev.net/undermyfeet.wav");
 		
 		// Set timer.
-		delayThread.setTime(20);
+		delayRunnable.setTime(20);
 		
 		// Name threads.
 		instrumentalThread.setName("instrumental");
@@ -28,7 +30,7 @@ public class ExecuteThreads {
 		// Create executor.
 		Exec exec = new Exec();
 		// Execute delay thread.
-		exec.execute(delayThread);
+		exec.execute(delayRunnable);
 		
 		// Start vocal thread.
 		System.err.println("\nCue vocals!");
