@@ -4,7 +4,7 @@
  "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">  
   
  <hibernate-mapping>  
-  <class name="hibernate.Student" table="emp1000">  
+  <class name="hibernate.Student" table="students">  
     <id name="id">  
      <generator class="assigned"></generator>  
     </id>

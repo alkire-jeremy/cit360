@@ -1,4 +1,4 @@
-package qcjsontest;
+package cit360;
 
 import static org.junit.Assert.assertEquals;
 import java.io.BufferedReader;
@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import org.junit.Test;
 
-public class QcjsonTest {
+public class QCTest {
 	
 	@Test
 	public void testAssertions() {

@@ -13,6 +13,10 @@
 		<servlet-class>servlets.ServBase</servlet-class>
 	</servlet>
 	<servlet>
+		<servlet-name>hibernate.hibernateServlet</servlet-name>
+		<servlet-class>hibernate.hibernateServlet</servlet-class>
+	</servlet>	
+	<servlet>
 		<description>
 		</description>
 		<display-name>ClientAppController</display-name>
@@ -31,6 +35,10 @@
 	<servlet-mapping>
 		<servlet-name>servlets.ServBase</servlet-name>
 		<url-pattern>/welcome</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>hibernate.hibernateServlet</servlet-name>
+		<url-pattern>/hibernateServlet</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>ClientServlet</servlet-name>

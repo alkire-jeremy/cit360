@@ -1,11 +1,10 @@
-package jackson;
+package cit360;
 
 import java.io.File;
 import java.io.IOException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
@@ -14,14 +13,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import json.model.Employee;
 
-public class JacksonTest {
+public class JJUTest {
 
-	private static final Logger logger = LogManager.getLogger(JacksonTest.class);
+	private static final Logger logger = LogManager.getLogger(JJUTest.class);
 
 //	@Ignore
 	@Test
 	public void testJsonToJava() {
-		File json = new File("src/test/resources", "Employee.json");
+		File json = new File("src/test/java/resources", "Employee.json");
 //		logger.debug(json.getAbsolutePath());
 		ObjectMapper mapper = new ObjectMapper();
 
@@ -49,7 +48,7 @@ public class JacksonTest {
 //	@Ignore
 	@Test
 	public void testJavaToJson() {
-		File json = new File("src/test/resources", "EmployeeOut.json");
+		File json = new File("src/test/java/resources", "EmployeeOut.json");
 		ObjectMapper mapper = new ObjectMapper();
 		Employee employee = createEmployee();
 
