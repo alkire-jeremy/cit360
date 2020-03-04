@@ -1,5 +1,6 @@
 package hibernate.utils;
 
+import java.util.Arrays;
 import java.util.List;
 
 import javax.persistence.criteria.CriteriaQuery;
@@ -11,7 +12,10 @@ import hibernate.Employee;
 import hibernate.Student;
 
 public class GetAllData {
-	public static void main(String[] args) throws Exception {
+	
+	private static String output[];
+	
+	public static void main(String[] args) {
 
 		SessionFactory sessFact = HibernateUtil.getSessionFactory();
 		Session session = sessFact.getCurrentSession();
@@ -25,19 +29,33 @@ public class GetAllData {
 		cqs.from(Student.class);
 		List<Student> studentList = session.createQuery(cqs).getResultList();
 		
+		output = new String[5];
+		
 		for (Employee employee : employeeList) {
 			System.out.println("ID: " + employee.getId());
 			System.out.println("First Name: " + employee.getFirstName());
 			System.out.println("Last Name: " + employee.getLastName());
+			
+			output[0] = Integer.toString(employee.getId());
+			output[1] = employee.getFirstName();
+			output[2] = employee.getLastName();
 		}
 		
 		for (Student student : studentList) {
 			System.out.println("Student ID: " + student.getId());
 			System.out.println("Student Name: " + student.getStudentName());
+			
+			output[3] = Integer.toString(student.getId());
+			output[4] = student.getStudentName();
 		}
 
 		tr.commit();
 		System.out.println("Data printed");
 		sessFact.close();
+	}
+	
+	public static String getData() {
+		String text = Arrays.toString(output);
+		return text;
 	}
 }

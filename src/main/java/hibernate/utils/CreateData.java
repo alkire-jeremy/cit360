@@ -23,6 +23,7 @@ private static final Logger logger = LogManager.getLogger(CreateData.class);
 		Employee employee = new Employee();
 		employee.setId(0);
 		employee.setFirstName("Jeremy");
+		employee.setLastName("Alkire");
 		employee.setMobileNumber("9998887777");
 		employee.setAddress("1776 Independence Rd");
 		session.save(employee);
@@ -30,6 +31,7 @@ private static final Logger logger = LogManager.getLogger(CreateData.class);
 		Employee employee1 = new Employee();
 		employee1.setId(1);
 		employee1.setFirstName("Jeremy");
+		employee1.setLastName("Alkire");
 		employee1.setMobileNumber("9998887777");
 		employee1.setAddress("1776 Independence Rd");
 		session.save(employee1);
@@ -44,14 +46,14 @@ private static final Logger logger = LogManager.getLogger(CreateData.class);
 		student2.setStudentName("Shadow");
 		session.save(student2);
 		
-		System.out.println("Please enter a name.");
-		Scanner scanner = new Scanner(System.in);
-		String name = scanner.nextLine();
-		
-		Strings tester = new Strings();
-		tester.setId(1);
-		tester.setUsername(name);
-		session.save(tester);
+//		System.out.println("Please enter a name.");
+//		Scanner scanner = new Scanner(System.in);
+//		String name = scanner.nextLine();
+//		
+//		Strings tester = new Strings();
+//		tester.setId(1);
+//		tester.setUsername(name);
+//		session.save(tester);
 		
 		tr.commit();
 		System.out.println("Successfully inserted");
