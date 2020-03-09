@@ -33,7 +33,8 @@
         </nav>
         <!-- End Navigation -->
         
-
+        <div class="container-fluid">
+		If the sum of the two numbers you entered on the previous page are listed below, the Addition.java program is running as intended and has passed the test.
         <%@ page import="systemtest.*" %>
         <% 
 		Addition add = new Addition();
@@ -44,8 +45,7 @@
         int sum = add.getSum();
         %>
         
-        <br><br>
-       	<div class="container-fluid">        
+        <br><br>      
         <p>Result: <% out.print(sum); %> </p>
         </div>
 </body>

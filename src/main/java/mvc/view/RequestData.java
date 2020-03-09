@@ -9,23 +9,42 @@ import java.io.InputStreamReader;
 
 public class RequestData {
 	
+	static String name = "";
+	static int height = 0;
+	static double weight = 0;
+	
 	// Request data from user necessary to configure athlete information.
 	public static String requestAthleteData() {
-
-		String name = "";
-		int height = 0;
-		double weight = 0;
 		
 		System.out.println("What is the name of the athlete?");
 		name = (getData());
 		
-		System.out.println("What is the athlete's height?");
-		height = (Integer.parseInt(getData()));
-		
-		System.out.println("What is the athlete's weight?");
-		weight = (Integer.parseInt(getData()));
+		getHeight();
+		getWeight();
 		
 		return (name + "," + height + "," + weight);
+	}
+	
+	static int getHeight() {
+		System.out.println("What is the athlete's height?");
+		try {
+			height = (Integer.parseInt(getData()));			
+		} catch (NumberFormatException e) {
+			System.out.println("Please enter a number.");
+			getHeight();
+		}
+		return height;
+	}
+	
+	static double getWeight() {
+		System.out.println("What is the athlete's weight?");
+		try {
+			weight = (Integer.parseInt(getData()));		
+		} catch (NumberFormatException e) {
+			System.out.println("Please enter a number.");
+			getWeight();
+		}
+		return weight;
 	}
 	
 	// Generic method to read user input.

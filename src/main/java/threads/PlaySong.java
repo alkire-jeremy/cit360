@@ -14,8 +14,7 @@ public class PlaySong {
 	private static final Logger logger = LogManager.getLogger(PlaySong.class);
 	private static final Audio instrumentalThread = new Audio();
 	private static final Audio vocalThread = new Audio();
-	private static final String site = "http://music.faintdev.net/";
-	
+	private static final String site = "http://music.faintdev.net/";	
 	
 	public void stopSongs() {
 		instrumentalThread.stopSong();

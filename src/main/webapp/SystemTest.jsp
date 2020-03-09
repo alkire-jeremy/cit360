@@ -32,5 +32,13 @@
             </div>
         </nav>
         <!-- End Navigation -->
+        
+        	<div class="container-fluid">
+	<br>Please enter one of the following commands to begin testing the system:<br><br>
+	<ul>
+		<li>Hibernate</li>
+		<li>Input</li>
+	</ul>
+	</div>
 </body>
 </html>
