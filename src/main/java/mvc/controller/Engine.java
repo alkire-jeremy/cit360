@@ -26,5 +26,9 @@ public class Engine {
 		athlete.configureAthlete(dataList.get(0), 
 				Integer.parseInt(dataList.get(1)), 
 				Double.parseDouble(dataList.get(2)));
+		
+		if (athlete.isConfigured()) {
+			RequestData.announceCreation();
+		}
 	}
 }

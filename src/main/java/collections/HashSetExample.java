@@ -49,7 +49,9 @@ public class HashSetExample {
 
 		// Display the contents of the HashSet.
 		System.out.println("\nHere are the contents of the set \"winners\", according to the values you provided: \n\n" + winners);
-		System.out.println("\nNote that they are not listed in the same order in which you added them to the set.");
+		System.out.println("\nNote that they are (probably) not listed in the same order in which you added them to the set.");
+		System.out.println("However, if you run this program twice and provide the same entries twice, they should retain the same order regardless of what order you add them in.");
+		System.out.println("This is because while a HashSet does not have an easily recognizable sembalance of order, elements are in fact determined by the hashing algorithm.");
 		
 		waitForInput();
 

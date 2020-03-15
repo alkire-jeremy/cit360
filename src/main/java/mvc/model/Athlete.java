@@ -11,7 +11,6 @@ public class Athlete {
 	
 	// Default constructor.
 	public Athlete () {
-		System.out.println("Athlete has been created.");
 	}
 	
 	// Configure athlete according to method arguments.
@@ -23,28 +22,37 @@ public class Athlete {
 	
 	// Getters & setters for name.
 	public String getName() {
-		return this.name;
+		return name;
 	}
+	
 	public void setName(String name) {
 		this.name = name;
-		System.out.println("The athlete name has been set to: " + name + ".");
 	}
 	
 	// Getters & setters for height.
 	public int getHeight() {
-		return this.height;
+		return height;
 	}
 	public void setHeight(int height) {
 		this.height = height;
-		System.out.println("The athlete height has been set to: " + height + ".");
 	}
 	
 	// Getters & setters for weight.
 	public double getWeight() {
-		return this.weight;
+		return weight;
 	}
 	public void setWeight(double weight) {
 		this.weight = weight;
-		System.out.println("The athlete weight has been set to: " + weight + ".");
+	}
+	
+	public boolean isConfigured() {
+		boolean response = false;
+		
+		// If name has a length greater than 1, height is greater than 0, and weight is greater than 0, return true.
+		if (name.length() > 1 && height > 0 && weight > 0) {
+			response = true;
+		}
+		
+		return response;
 	}
 }

@@ -25,6 +25,10 @@ public class RequestData {
 		return (name + "," + height + "," + weight);
 	}
 	
+	public static void announceCreation() {
+		System.out.println("An athlete has been created and configured successfully.");
+	}
+	
 	static int getHeight() {
 		System.out.println("What is the athlete's height?");
 		try {
