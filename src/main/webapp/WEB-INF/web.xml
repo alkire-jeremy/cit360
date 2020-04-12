@@ -30,6 +30,20 @@
 		<servlet-name>GetDataServlet</servlet-name>
 		<servlet-class>hibernate.utils.GetDataServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>MobileServlet</display-name>
+		<servlet-name>MobileServlet</servlet-name>
+		<servlet-class>servlets.MobileServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>SystemTest</display-name>
+		<servlet-name>SystemTest</servlet-name>
+		<servlet-class>servlets.SystemTest</servlet-class>
+	</servlet>
 
 	<!-- Servlet Mappings -->
 	<servlet-mapping>
@@ -47,6 +61,14 @@
 	<servlet-mapping>
 		<servlet-name>GetDataServlet</servlet-name>
 		<url-pattern>/GetDataServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MobileServlet</servlet-name>
+		<url-pattern>/MobileServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SystemTest</servlet-name>
+		<url-pattern>/SystemTest</url-pattern>
 	</servlet-mapping>
 
 </web-app>

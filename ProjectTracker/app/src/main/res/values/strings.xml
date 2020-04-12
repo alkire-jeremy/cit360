@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Project Tracker</string>
+
+    <string name="hello">Accessing Servlet from Android</string>
+    <string name="submit_project">Submit Project</string>
+    <string name="add_project">Add Project</string>
+    <string name="view_projects">View Projects</string>
+
+    <string name="project_name">Project Name</string>
+    <string name="client_name">Client Name</string>
+    <string name="character_name">Character Name</string>
+    <string name="art_style">Art Style</string>
+    <string name="specifications">Specifications</string>
+    <string name="person_count">Person Count</string>
+    <string name="Price">Price</string>
+    <string name="Status">Status</string>
+    <string name="system_test">System Test</string>
+</resources>

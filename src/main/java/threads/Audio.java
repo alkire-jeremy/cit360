@@ -28,7 +28,7 @@ public class Audio extends Thread {
 
 	@Override
 	public synchronized void run() {
-//		System.out.println("Starting " + currentThread().getName() + " thread.");
+		System.out.println("Starting " + currentThread().getName() + " thread.");
 		running.set(true);
 		try {
 			playAudio();

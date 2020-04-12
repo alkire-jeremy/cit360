@@ -25,9 +25,13 @@
 		<!-- Delete this if necessary. -->
 		<mapping resource="student.hbm.xml"/>
 		
-			<mapping class="hibernate.Strings"/>
+		<mapping class="hibernate.Strings"/>
 		<!-- Delete this if necessary. -->
-		<mapping resource="strings.hbm.xml"/>			
+		<mapping resource="strings.hbm.xml"/>
+		
+		<mapping class="hibernate.Project"/>
+		<!-- Delete this if necessary. -->
+		<mapping resource="project.hbm.xml"/>				
 
 	</session-factory>
 </hibernate-configuration>

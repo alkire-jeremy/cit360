@@ -24,7 +24,7 @@ public class ArrayListExample extends ArrayList {
 		System.out.println("To begin, let us create an ArrayList called adjectives.");
 		
 		waitForInput();
-
+		
 		// ArrayList constructor.
 		adjectives = new ArrayListExample();
 		

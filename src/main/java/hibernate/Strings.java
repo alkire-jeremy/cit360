@@ -38,6 +38,4 @@ public class Strings implements Serializable {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	
-	
 }
